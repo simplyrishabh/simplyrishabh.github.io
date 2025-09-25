@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You for Attending</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --white: #fff;
+      --glass-bg: rgba(255, 255, 255, 0.05);
+      --border: rgba(255, 255, 255, 0.15);
+      --text-color: #ffffff;
+      --link-hover: #00ffd5;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #1a1a2e, #16213e);
+      overflow: hidden;
+      color: var(--text-color);
+    }
+
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.4;
+      filter: blur(80px);
+      animation: float 20s infinite alternate ease-in-out;
+    }
+
+    .blob1 {
+      width: 400px;
+      height: 400px;
+      background: #00c9ff;
+      top: -100px;
+      left: -100px;
+    }
+
+    .blob2 {
+      width: 300px;
+      height: 300px;
+      background: #f72585;
+      bottom: -80px;
+      right: -80px;
+    }
+
+    @keyframes float {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(50px, 60px); }
+    }
+
+    .container {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .glass-box {
+      background: var(--glass-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 50px 40px;
+      backdrop-filter: blur(20px);
+      box-shadow: var(--shadow);
+      max-width: 550px;
+      width: 100%;
+      animation: fadeIn 1s ease-out;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #cccccc;
+      margin-bottom: 40px;
+      line-height: 1.6;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .link-card {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 15px 20px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      text-decoration: none;
+      color: var(--text-color);
+      background: rgba(255, 255, 255, 0.08);
+      transition: transform 0.2s ease, border 0.2s ease;
+    }
+
+    .link-card:hover {
+      transform: scale(1.03);
+      border-color: var(--link-hover);
+    }
+
+    .link-icon {
+      width: 28px;
+      height: 28px;
+    }
+
+    .link-text {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.85rem;
+      color: #999;
+    }
+
+    @media (min-width: 600px) {
+      .links {
+        flex-direction: row;
+      }
+
+      .link-card {
+        flex: 1;
+        justify-content: center;
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+
+  <div class="container">
+    <div class="glass-box">
+      <h1>Thank You for Attending</h1>
+      <p>
+        I truly appreciate you being part of the session.<br>
+        If you'd like to stay connected or explore <strong>AzurEye</strong>, here are two quick links:
+      </p>
+
+      <div class="links">
+        <a class="link-card" href="https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME/" target="_blank">
+          <img class="link-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" />
+          <span class="link-text">LinkedIn Profile</span>
+        </a>
+        <a class="link-card" href="https://github.com/YOUR_USERNAME/AzurEye" target="_blank">
+          <img class="link-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" />
+          <span class="link-text">View AzurEye</span>
+        </a>
+      </div>
+
+      <footer>
+        &copy; 2025 — Made with ❤️ by [Your Name]
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
+
